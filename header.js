@@ -11,6 +11,8 @@ import {
 
 /*组件*/
 function Header(){
+
+
 	return(
 
 		<View style={styles.flex}>
@@ -47,9 +49,6 @@ var styles = StyleSheet.create({
 		backgroundColor:'#cd1d1c',
 		borderRadius:10,
 		borderWidth:1,
-	},
-	font_3:{
-		color:'#000',
 	}
 })
 

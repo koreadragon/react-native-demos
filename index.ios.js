@@ -9,29 +9,22 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
+
 import Header from './header';
 import News from './newsContent';
- 
-let news = [
-'泰国男子因点赞国王被PS照片获刑32年',
-'男子为泄私愤砸毁80余辆轿车(图)',
-'嫌犯被曝因“弄通检察院”未批捕 官方回应',
-'老人植钢板2个月即断裂 医院称要赔找钢板厂',
-'父母被邻居杀害 女儿电话中听到母亲惨叫(图)',
+import Fuck from './fuck'; 
+import HanImage from './myImage';
 
-];
-
+let someNews = ['金三胖','特朗普发推','习大大万岁!']; 
 
 function NewHeader (){
   return(
-
-    <View>
-      <Header />
-      <News news = {news}/>
-    </View>
-
+  	<View >
+      <HanImage />
+  	</View>
     )
 }
   

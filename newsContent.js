@@ -42,7 +42,7 @@ class News extends Component {
 			var text = (
 				<Detail 
 					numberOfLines={2}
-					key={i} 
+					key={i}
 					style={styles.news_item}
 					title={this.props.news[i]}
 				/>
@@ -81,6 +81,8 @@ let styles = StyleSheet.create({
 		marginRight:10,
 		fontSize:15,
 		lineHeight:30,
+		fontStyle:'italic',
+		fontWeight:'bold'
 	}
 
 });
