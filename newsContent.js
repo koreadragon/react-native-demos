@@ -6,26 +6,47 @@ import {
   View
 } from 'react-native';
 
-var News = React.createClass({
+class Detail extends Component{
+	show(){
+		alert(this.props.title);
+	}
 
-	show:function (title){
-		alert(title);
-	},
-
-	
-
-	render:function(){
-		var newsComponents = [];
-		for(var i in this.props.news){
-			var text = (
+	constructor(props) {
+	    super(props);
+	    /*this.state = {
+	    	title: ''
+	    };*/
+	    this.show = this.show.bind(this);
+  	}
+  	render (){
+		 
+		return(
 				<Text 
-					onPress = {this.show.bind(this,this.props.news[i])}
+					onPress = {this.show}
+					numberOfLines={this.props.numberOfLines}
+					key={this.props.key} 
+					style={this.props.style}
+					>
+					{ this.props.title}
+				</Text> 
+				
+			);
+	}
+}
+
+class News extends Component {
+
+	render (){
+		var newsComponents = [];
+		for(var i in  this.props.news){
+			var text = (
+				<Detail 
 					numberOfLines={2}
 					key={i} 
 					style={styles.news_item}
-					>
-					{this.props.news[i]}
-				</Text>
+					title={this.props.news[i]}
+				/>
+					  
 
 			);
 
@@ -37,14 +58,11 @@ var News = React.createClass({
 					<Text style={styles.news_title}>今日要闻</Text>
 					{newsComponents}
 				</View>
-					
-
-
+				
 			);
-
 	}
 	
-});
+ }
 
 let styles = StyleSheet.create({
 	flex:{
