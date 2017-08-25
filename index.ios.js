@@ -11,69 +11,37 @@ import {
   Text,
   View
 } from 'react-native';
+import Header from './header';
+import News from './newsContent';
+ 
+let news = [
+'泰国男子因点赞国王被PS照片获刑32年泰国男子因点赞国王被PS照片获刑32年',
+'男子为泄私愤砸毁80余辆轿车(图)',
+'嫌犯被曝因“弄通检察院”未批捕 官方回应',
+'老人植钢板2个月即断裂 医院称要赔找钢板厂',
+'父母被邻居杀害 女儿电话中听到母亲惨叫(图)',
+'泰国男子因点赞国王被PS照片获刑32年泰国男子因点赞国王被PS照片获刑32年',
+'男子为泄私愤砸毁80余辆轿车(图)',
+'嫌犯被曝因“弄通检察院”未批捕 官方回应',
+'老人植钢板2个月即断裂 医院称要赔找钢板厂',
+'父母被邻居杀害 女儿电话中听到母亲惨叫(图)',
+'泰国男子因点赞国王被PS照片获刑32年泰国男子因点赞国王被PS照片获刑32年',
+'男子为泄私愤砸毁80余辆轿车(图)',
+'嫌犯被曝因“弄通检察院”未批捕 官方回应',
+'老人植钢板2个月即断裂 医院称要赔找钢板厂',
+'父母被邻居杀害 女儿电话中听到母亲惨叫(图)'
+];
 
- function Hello () {
-  
-    return (
-      <View style = {[styles.flex,styles.container]}>
-        <View style={styles.item}>
-          <View style = {[styles.flex,styles.center]}> 
-            <Text>酒店</Text>
-          </View>
-          <View style = {[styles.flex,styles.lineLeftRight]}>
-            <View style = {[styles.flex,styles.center,styles.lineCenter]}> 
-              <Text>海外酒店</Text>
-            </View>
-            <View style = {[styles.flex,styles.center]}> 
-              <Text>特价酒店</Text>
-            </View>
-          </View>
-          <View style={styles.flex}>
-            <View style = {[styles.flex,styles.center,styles.lineCenter]}> 
-              <Text>团购</Text>
-            </View>
-            <View style = {[styles.flex,styles.center]}> 
-              <Text>民宿，客栈</Text>
-            </View>
-          </View>
-        </View>
-      </View>
-    );
-   
+
+function NewHeader (){
+  return(
+
+    <View>
+      <Header />
+      <News news = {news}/>
+    </View>
+
+    )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop:25,
-    backgroundColor:'#f2f2f2',
-  },
-  flex:{
-    flex:1,
-  },
-  center:{
-    justifyContent:'center',
-    alignItems:'center',
-  },
-  item:{
-    flexDirection:'row',
-    backgroundColor:'#f123ad',
-    marginTop:5,
-    marginLeft:5,
-    marginRight:5,
-    height:80,
-    borderRadius:5,
-  },
-  lineLeftRight:{
-    borderLeftWidth:1,
-    borderRightWidth:1,
-    borderColor:'white',
-
-  },
-  lineCenter:{
-    borderBottomWidth:1,
-    borderColor:'white',
-  }
-});
-
-
-AppRegistry.registerComponent('Hello', () => Hello);
+  
+AppRegistry.registerComponent('Hello', () => NewHeader);
