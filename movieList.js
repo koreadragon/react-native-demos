@@ -28,6 +28,7 @@ class MovieList extends Component{
 				<Image	
 					style={styles.thumbnail}
 					source={{uri:movie.posters.thumbnail}}
+					defaultSource={require('./hanImg.png')}
 				 />
 				<View style={styles.rightContainer}>
 					<Text style={styles.title}>{movie.title}</Text>

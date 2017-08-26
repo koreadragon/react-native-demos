@@ -17,18 +17,20 @@ import Header from './header';
 import News from './newsContent';
 import Fuck from './fuck'; 
 import HanImage from './myImage';
-import Movie from './Movie';
+import Movie from './scrollView';
 import MovieList from './movieList';
-
-
-let someNews = ['金三胖','特朗普发推','习大大万岁!']; 
+import MyListView from './listView';
+import movieListWithListView from './movieListWithListView';
 
 function NewHeader (){
   return(
-  	 
-      <MovieList />
+  	 <View>
+         <Header />
+         <MyListView />
+     </View>
+      
   	 
     )
 }
   
-AppRegistry.registerComponent('Hello', () => MovieList);
+AppRegistry.registerComponent('Hello', () => movieListWithListView);
