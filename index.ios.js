@@ -21,6 +21,7 @@ import MovieList from './src/components/movieList';
 import MyListView from './src/components/listView';
 import movieListWithListView from './src/components/movieListWithListView';
 import MyNavigator from './src/components/navigation';
+import PassValueNavigator from './src/components/passValue';
 function NewHeader (){
   return(
   	 <View>
@@ -32,4 +33,4 @@ function NewHeader (){
     )
 }
   
-AppRegistry.registerComponent('Hello', () => MyNavigator );
+AppRegistry.registerComponent('Hello', () => PassValueNavigator );

@@ -9,10 +9,9 @@ import {
   RefreshControl,
   Image,
   ListView,
-  Navigator
 } from 'react-native';
-/*import {Navigator} from 'react-native-deprecated-custom-components';
-*/
+import {Navigator} from 'react-native-deprecated-custom-components';
+
 /*
 1.设置路由对象
 2.渲染配置
@@ -64,10 +63,7 @@ class SecondView extends Component{
 
 
 class MyNavigator extends Component{
-	pressPop(){
-
-	}
-
+ 
 	render(){
 
 		var rootRoute={
