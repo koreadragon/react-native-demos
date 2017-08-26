@@ -5,21 +5,60 @@ import {
   Text,
   View,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  RefreshControl
 } from 'react-native';
 
 
 class Movie extends Component{
+
+
+	_onScrollBeginDrag(){
+		console.log('开始拖拽')
+	}
+	_onScrollEndDrag(){
+		console.log('结束拖拽')
+	}
+	_onMomentumScrollBegin(){
+		console.log('开始滚动')
+	}
+	_onMomentumScrollEnd(){
+		console.log('滑动结束')
+	}
+	_onRefresh(){
+		console.log('刷新666')
+	}
+
+
+
+
+
+
 	render(){
 
 		return(
 			<View style={styles.container}>
-				<ScrollView style={styles.scrollView}>
+				<ScrollView
+				 style={styles.scrollView}
+				 showsVerticalScrollIndicator={true}
+				 onScrollBeginDrag = {this._onScrollBeginDrag}
+				 onScrollEndDrag = {this._onScrollEndDrag}
+				 onMomentumScrollBegin = {this._onMomentumScrollBegin}
+				 onMomentumScrollEnd = {this._onMomentumScrollEnd}
+				 refreshControl={
+				 	<RefreshControl 
+				 		refreshing={false}
+				 		tintColor='#ccc'
+				 		title='loading...'
+				 		onRefresh={this._onRefresh}
+				 	/>
+				 }
+				>
 					<View style={styles.view_1}></View>
 					<View style={styles.view_2}></View>
 					<View style={styles.view_3}></View>
-				</ScrollView>
-			</View>	
+					</ScrollView>
+				</View>	
 
 		)	
 
@@ -31,11 +70,11 @@ class Movie extends Component{
 var styles = StyleSheet.create({
 	container:{
 		flex:1,
-		backgroundColor:'cyan'
+		backgroundColor:'orange'
 	},
 	scrollView:{
 		marginTop:25,
-		backgroundColor:'#cccccc',
+		backgroundColor:'#fff',
 	},
 	font:{
 		fontSize:25,
