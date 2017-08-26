@@ -20,7 +20,7 @@ import Movie from './src/components/scrollView';
 import MovieList from './src/components/movieList';
 import MyListView from './src/components/listView';
 import movieListWithListView from './src/components/movieListWithListView';
-
+import MyNavigator from './src/components/navigation';
 function NewHeader (){
   return(
   	 <View>
@@ -32,4 +32,4 @@ function NewHeader (){
     )
 }
   
-AppRegistry.registerComponent('Hello', () => movieListWithListView);
+AppRegistry.registerComponent('Hello', () => MyNavigator );
