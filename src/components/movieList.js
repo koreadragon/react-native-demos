@@ -12,7 +12,7 @@ import {
 
 
 /*从文件中读取数据,默认调用了JSON.parse*/
-var movieData = require('./data.json');
+var movieData = require('../../data.json');
 
 var movies = movieData.movies;
 

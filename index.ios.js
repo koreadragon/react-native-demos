@@ -13,14 +13,13 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import Header from './header';
-import News from './newsContent';
-import Fuck from './fuck'; 
-import HanImage from './myImage';
-import Movie from './scrollView';
-import MovieList from './movieList';
-import MyListView from './listView';
-import movieListWithListView from './movieListWithListView';
+import Header from './src/components/header';
+import News from './src/components/newsContent'; 
+import HanImage from './src/components/myImage';
+import Movie from './src/components/scrollView';
+import MovieList from './src/components/movieList';
+import MyListView from './src/components/listView';
+import movieListWithListView from './src/components/movieListWithListView';
 
 function NewHeader (){
   return(
