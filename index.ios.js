@@ -22,15 +22,18 @@ import MyListView from './src/components/listView';
 import movieListWithListView from './src/components/movieListWithListView';
 import MyNavigator from './src/components/navigation';
 import PassValueNavigator from './src/components/passValue';
+import Blink from './src/components/blink';
+
+
 function NewHeader (){
   return(
-  	 <View>
-         <Header />
-         <MyListView />
+  	 <View style={{flex:1}}>
+         <Blink text='一闪一闪亮晶晶'/>
+          
      </View>
       
   	 
     )
 }
   
-AppRegistry.registerComponent('Hello', () => PassValueNavigator );
+AppRegistry.registerComponent('Hello', () => NewHeader );

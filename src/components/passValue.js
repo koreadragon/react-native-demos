@@ -75,7 +75,7 @@ class DetailPage extends Component{
       <Text style={detailStyle.text}>{this.props.showText}</Text>
         <TouchableOpacity style={detailStyle.button} 
         onPress={this.popFrontPage}>
-          <Text>进入下一页</Text>
+          <Text>返回上一页</Text>
         </TouchableOpacity>
       </View>
 
