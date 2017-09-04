@@ -23,17 +23,17 @@ import movieListWithListView from './src/components/movieListWithListView';
 import MyNavigator from './src/components/navigation';
 import PassValueNavigator from './src/components/passValue';
 import Blink from './src/components/blink';
+import HanInput from './src/components/input';
 
 
 function NewHeader (){
   return(
   	 <View style={{flex:1}}>
-         <Blink text='一闪一闪亮晶晶'/>
-          
+         <HanInput text='一闪一闪亮晶晶'/>
      </View>
       
   	 
     )
 }
   
-AppRegistry.registerComponent('Hello', () => NewHeader );
+AppRegistry.registerComponent('Hello', () => HanInput );
