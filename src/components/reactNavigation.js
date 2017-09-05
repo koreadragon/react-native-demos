@@ -12,7 +12,7 @@ import {
   Button
 
 } from 'react-native';
-import {StackNavigator,TabNavigator} from 'react-navigation'; 
+import {StackNavigator,TabNavigator,DrawerNavigator} from 'react-navigation'; 
 
 
 class HomeScreen extends Component{
@@ -104,5 +104,7 @@ const SimpleApp = StackNavigator({
 	Home:{screen:MainScreenNavigator},
 	Chat:{screen:ChatLucy}
 });
+
+
 
 export default SimpleApp;

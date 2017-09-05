@@ -25,6 +25,7 @@ import PassValueNavigator from './src/components/passValue';
 import Blink from './src/components/blink';
 import HanInput from './src/components/input';
 import ReactNavigation from './src/components/reactNavigation';
+import DrawerNavigation from './src/components/drawerNavigation';
 
 
 function NewHeader (){
@@ -37,4 +38,4 @@ function NewHeader (){
     )
 }
   
-AppRegistry.registerComponent('Hello', () => ReactNavigation );
+AppRegistry.registerComponent('Hello', () => DrawerNavigation );
