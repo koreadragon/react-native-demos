@@ -38,13 +38,25 @@ class HomeScreen extends Component{
 }
 
 class ChatLucy extends Component{
-	static navigationOptions =({navigation})=> ({
-		title:`Chat with ${navigation.state.params.user}`,
-	})
+	 static navigationOptions = ({ navigation }) => {
+	  const {state, setParams} = navigation;
+	  const isInfo = state.params.mode === 'info';
+	  const {user} = state.params;
+	  return {
+			    title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
+			    headerRight: (
+			      <Button
+			        title={isInfo ? 'Done' : `${user}'s info`}
+			        onPress={() => setParams({ mode: isInfo ? 'none' : 'info'})}
+			      />
+			    ),
+			  };
+		};
+
 	render(){
 		return (
 			<View  style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
-				<Text style={{fontWeight:'bold'}}>chatting with Lucy</Text>
+				<Text style={{fontWeight:'bold'}}>{this.props.navigation.state.params.user}</Text>
 			</View>
 
 		);
@@ -58,7 +70,7 @@ class RecentChatsScreen extends React.Component {
     			<Text>List of recent chats</Text>
 		 	   <Button
 				  onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}
-				  title="Chat with Lucy"
+				  title="Go"
 				/>
     		</View>
   }
@@ -70,7 +82,7 @@ class AllContactsScreen extends React.Component {
     			<Text>List of all chats</Text>
 		 	   <Button
 				  onPress={() => this.props.navigation.navigate('Chat', { user: 'Jane' })}
-				  title="Chat with Jane"
+				  title="Go"
 				/>
     		</View>
   }
