@@ -25,7 +25,7 @@ class HomeScreen extends Component{
 
 		return (
 
-			<View>
+			<View style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
 				<Text>Hello ,Chat App!</Text>
 				<Button onPress={() => navigate('Chat')}
 				title='contact Lucy'
@@ -43,8 +43,8 @@ class ChatLucy extends Component{
 	}
 	render(){
 		return (
-			<View>
-				<Text>chatting with Lucy</Text>
+			<View  style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
+				<Text style={{fontWeight:'bold'}}>chatting with Lucy</Text>
 			</View>
 
 		);
