@@ -46,6 +46,11 @@ class MyScene extends Component{
 }
 
 export default class NavigatorIOSApp extends Component{
+	_handleNavigationRequest(){
+		this.refs.nav.push({
+			barTintColor:'red',
+		})
+	}
 	render(){
 		return(
 			<NavigatorIOS 
@@ -53,6 +58,8 @@ export default class NavigatorIOSApp extends Component{
 				{component:MyScene,title:'首页'}
 			}
 			style={{flex:1}}
+
+			barTintColor='#ffffcc'
 			/>
 
 		);

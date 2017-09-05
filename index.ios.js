@@ -27,6 +27,8 @@ import HanInput from './src/components/input';
 import ReactNavigation from './src/components/reactNavigation';
 import DrawerNavigation from './src/components/drawerNavigation';
 import NaviIOS from './src/components/navigatorIOS';
+import Touch from './src/components/touches';
+
 
 function NewHeader (){
   return(
@@ -38,4 +40,4 @@ function NewHeader (){
     )
 }
   
-AppRegistry.registerComponent('Hello', () => NaviIOS );
+AppRegistry.registerComponent('Hello', () => Touch );
