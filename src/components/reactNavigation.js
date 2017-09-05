@@ -12,7 +12,7 @@ import {
   Button
 
 } from 'react-native';
-import {StackNavigator} from 'react-navigation'; 
+import {StackNavigator,TabNavigator} from 'react-navigation'; 
 
 
 class HomeScreen extends Component{
@@ -27,7 +27,7 @@ class HomeScreen extends Component{
 
 			<View style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
 				<Text>Hello ,Chat App!</Text>
-				<Button onPress={() => navigate('Chat')}
+				<Button onPress={() => navigate('Chat',{user:'Lucy'})}
 				title='contact Lucy'
 				></Button>
 			</View>
@@ -38,9 +38,9 @@ class HomeScreen extends Component{
 }
 
 class ChatLucy extends Component{
-	static navigationOptions = {
-		title:'Hello,Lucy!',
-	}
+	static navigationOptions =({navigation})=> ({
+		title:`Chat with ${navigation.state.params.user}`,
+	})
 	render(){
 		return (
 			<View  style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
@@ -52,12 +52,44 @@ class ChatLucy extends Component{
 }
 
 
+class RecentChatsScreen extends React.Component {
+  render() {
+    return 	<View>
+    			<Text>List of recent chats</Text>
+		 	   <Button
+				  onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}
+				  title="Chat with Lucy"
+				/>
+    		</View>
+  }
+}
+
+class AllContactsScreen extends React.Component {
+  render() {
+    return 	<View>
+    			<Text>List of all chats</Text>
+		 	   <Button
+				  onPress={() => this.props.navigation.navigate('Chat', { user: 'Jane' })}
+				  title="Chat with Jane"
+				/>
+    		</View>
+  }
+}
+
+const MainScreenNavigator = TabNavigator({
+  Recent: { screen: RecentChatsScreen },
+  All: { screen: AllContactsScreen },
+});
+
+MainScreenNavigator.navigationOptions = {
+	title:'My chats'
+}
 
 
 
 
 const SimpleApp = StackNavigator({
-	Home:{screen:HomeScreen},
+	Home:{screen:MainScreenNavigator},
 	Chat:{screen:ChatLucy}
 });
 
