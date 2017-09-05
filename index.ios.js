@@ -26,7 +26,7 @@ import Blink from './src/components/blink';
 import HanInput from './src/components/input';
 import ReactNavigation from './src/components/reactNavigation';
 import DrawerNavigation from './src/components/drawerNavigation';
-
+import NaviIOS from './src/components/navigatorIOS';
 
 function NewHeader (){
   return(
@@ -38,4 +38,4 @@ function NewHeader (){
     )
 }
   
-AppRegistry.registerComponent('Hello', () => DrawerNavigation );
+AppRegistry.registerComponent('Hello', () => NaviIOS );

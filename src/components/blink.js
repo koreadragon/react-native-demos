@@ -13,29 +13,22 @@ class Blink extends Component{
 		this.state={
 			show:true,
 			time:'',
+			pass:this.props.pass,
 		}
-		setInterval(() => {
-			this.setState(previousState => {
-				var newTime = new Date();
-				newTime = `${newTime.toLocaleDateString()}`
-				return {
-					show:!previousState.show,
-					
-					time :newTime,
-
-				}
-			});
-		},1000);
 	}
 
 	render(){
 		 
 		return (
-			<View style={styles.container}>
-		        <View style={[styles.content,{  backgroundColor: 'powderblue'}]} />
-		        <View style={[styles.content,{  backgroundColor: 'skyblue'}]} />
-		        <View style={[styles.content,{  backgroundColor: 'steelblue'}]} />
-     		 </View>
+			<View style={{flex:1}}>
+				<Text style={styles.pass}>我是传来的值：{this.props.pass}</Text>
+				<View style={styles.container}>
+			        <View style={[styles.content,{  backgroundColor: 'powderblue'}]} />
+			        <View style={[styles.content,{  backgroundColor: 'skyblue'}]} />
+			        <View style={[styles.content,{  backgroundColor: 'steelblue'}]} />
+	     		 </View>
+			</View>
+			
 		);
 	}
 }
@@ -62,6 +55,16 @@ let styles = StyleSheet.create({
 		borderBottomWidth:1,
 		borderBottomColor:'silver'
 		 
+
+	},
+	pass:{
+		marginTop:64,
+		backgroundColor:'black',
+		height:64,
+		fontSize:15,
+		color:'white',
+		textAlign:'center',
+		fontWeight:'bold'
 
 	}
 })
