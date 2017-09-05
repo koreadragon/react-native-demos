@@ -17,13 +17,17 @@ class MyButton extends Component{
   _onPress(){
     alert(`嘤嘤嘤`)
   }
+  _onLongPress(){
+    alert(`长按了`)
+  }
 
   render(){
     return (
         <View style = {styles.container}>
               <TouchableHighlight 
               onPress={this._onPress.bind(this)}
-              style={styles.button}>
+              style={styles.button}
+              onLongPress={this._onLongPress.bind(this)}>
                   <Text style={styles.text}>点我</Text>
               </TouchableHighlight>
         </View>
