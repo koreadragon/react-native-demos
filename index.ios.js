@@ -29,16 +29,17 @@ import DrawerNavigation from './src/components/drawerNavigation';
 import NaviIOS from './src/components/navigatorIOS';
 import Touch from './src/components/touches';
 import Animation from './src/components/animation';
+import Indicator from './src/components/indicator';
 
 
 function NewHeader (){
   return(
   	 <View style={{flex:1}}>
-         <HanInput text='一闪一闪亮晶晶'/>
+         <Indicator  />
      </View>
       
   	 
     )
 }
   
-AppRegistry.registerComponent('Hello', () => Animation );
+AppRegistry.registerComponent('Hello', () => Indicator );

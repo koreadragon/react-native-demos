@@ -13,7 +13,7 @@ class FadeView extends Component{
 		Animated.timing(
 			this.state.fadeAnim,{
 				toValue:1,
-				duration:4000,
+				duration:2000,
 		
 		}).start();
 	}
