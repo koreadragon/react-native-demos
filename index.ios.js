@@ -28,6 +28,7 @@ import ReactNavigation from './src/components/reactNavigation';
 import DrawerNavigation from './src/components/drawerNavigation';
 import NaviIOS from './src/components/navigatorIOS';
 import Touch from './src/components/touches';
+import Animation from './src/components/animation';
 
 
 function NewHeader (){
@@ -40,4 +41,4 @@ function NewHeader (){
     )
 }
   
-AppRegistry.registerComponent('Hello', () => Touch );
+AppRegistry.registerComponent('Hello', () => Animation );
